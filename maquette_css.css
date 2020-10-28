@@ -1,0 +1,278 @@
+/*************** GENERAL ******************/
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+#destruction {
+	width: 100%;
+	height: 100%;
+	position: fixed; /* l'image fait tout l'écran et on ne peut pas scroller : le reste est caché en permanence*/
+}
+
+.hidden {
+	z-index: -999;
+	opacity: 0;
+}
+
+.showed {
+	z-index: 999;
+	opacity: 1;
+	top: 0; /*pour passer par dessus le header*/
+
+}
+
+h1 {
+	font-family: Raleway_Bold;
+	font-size: 30pt;
+	margin: 0px;
+}
+
+h2 {
+	font-family: Raleway;
+	font-size: 25pt;
+	color: #235680;
+	margin: 0px;
+	margin-bottom: 25px;
+}
+
+h3 {
+	margin-bottom: 0;
+	color: #333333 ;
+	font-weight: 400;
+}
+
+p {
+	max-width:  900px;
+	display: block;
+	margin: 0 auto;
+	line-height: 20pt;
+}
+
+.showed {
+	width: 100%;
+	height: auto;
+	z-index: 15;
+}
+
+/*ajout de la police Raleway*/
+@font-face {
+ 	font-family: "Raleway";
+ 	src: url("Raleway_Thin.ttf") format("truetype");
+}
+
+@font-face {
+ 	font-family: "Raleway_Bold";
+ 	src: url("Raleway_Bold.ttf") format("truetype");
+}
+
+.container { /*container général pour délimiter la largeur de la page*/
+	width: 1100px;
+	margin: 0 auto; /*centre hrizontalement*/
+	height: 100%; /*100% de la taille du parent pour l'alignement vertical*/
+	display: flex;
+}
+
+/*************** HEADER ******************/
+
+header {
+	background-color: #3480be;
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 75px;
+	margin: 0;
+	top: 0px;
+  	left: 0px;
+  	text-align: right;
+}
+
+#myname {
+	margin-left: 15%;
+	margin-top: 10px;
+	color: #FFF;
+	font-size: 20pt;
+	position: absolute;
+	line-height: 50px;
+	font-family: Raleway_Bold;
+	font-variant-caps: small-caps;
+ }
+
+ul#header_ul {
+	padding-right: 15%;
+  	padding-top: 10px;
+
+
+}
+
+#header_ul li {
+	display: inline;
+	list-style-type: none;
+}
+
+#header_ul a {
+	text-decoration: none;
+	padding: 10px 20px;
+	color: #FFF;
+	transition: .3s;
+}
+
+#header_ul a:hover {
+	background-color: #FFF;
+	color: #3480be;
+}
+
+/*************** SECTION 1 : A PROPOS ; ******************/
+
+#apropos {
+	background-image: url("./images/bg.gif");
+	background-repeat: repeat-x; /*repetition horizontale du motif*/
+	width: 100%;
+	height: 300px;
+	margin-top: 75px; /*taille du header pour que l'ancre ne dépasse pas sur le titre*/
+	color: #235680;
+	text-align: center;
+	padding: 80px 0;
+}
+
+.contact {
+	width: 150px;
+	height: 50px;
+	float: left;
+}
+
+.contact a:link, .contact a:visited {
+	width: 120px;
+	height: 40px;
+	display: block;
+	background-color: #5a9deb;
+	border-radius: 7px;
+	text-decoration: none;
+	color: #FFF;
+	line-height: 40px;
+	vertical-align: text-top;
+}
+
+.button {
+	width: 300px;
+	margin: 50px auto;
+}
+
+.contact a:hover {
+	background-color: #fff;
+	color: #5a9deb;
+	border: solid 1px #5a9deb;
+	border-radius: 7px;
+}
+
+.ensavoir {
+	width: 150px;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+
+.ensavoir a:link, .ensavoir a:visited {
+	width: 120px;
+	height: 40px;
+	display: block;
+	background-color: #FFF;
+	border: solid 1px #5a9deb;
+	border-radius: 7px;
+	text-decoration: none;
+	color: #5a9deb;
+	line-height: 40px;
+	vertical-align: text-top;
+}
+
+.ensavoir a:hover {
+	background-color: #5a9deb;
+	color: #fff;
+}
+
+
+/*************** SECTION 2 : REALISATION ; ******************/
+
+#realisation {
+	background-color: #f5f5f5;
+	width: 100%;
+	height: 500px;
+	color: #333333;
+	padding: 80px 0;
+}
+
+#realisation p {
+	margin-bottom: 20px;
+}
+
+#realisation h2 { /*aligne le titre avec la div d'en dessous*/
+	width: 1100px; 
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.sep { /*trait bleu sous le titre*/
+	width: 100px;
+	height: 2px;
+	background-color: #3480be ;
+	margin: 20px 0px;
+}
+
+/*************** SECTION 3 : LOGOS CLIENTS ; ******************/
+
+#clients {
+	background-color: #FFF;
+	width: 100%;
+	height: 150px;
+}
+
+#clients a:link, #client a:visited {
+	margin: auto;
+	padding-bottom: 10px;
+}
+
+#clients a:hover {
+	border-bottom: solid 2px #5a9deb;
+}
+
+/*************** FOOTER ; ******************/
+
+footer {
+	background-color: #3480be;
+	width: 100%;
+	height: 75px;
+	color:  #FFF;
+	text-align: center;
+	line-height: 75px; /*la ligne fait la même taille que le footer pour centrer verticalement le texte*/
+	vertical-align: middle;
+}
+
+footer a:link, footer a:visited {
+	color: #FFF;
+}
+
+footer a:hover {
+	color: #DDD;
+}
+
+/*
+Couleurs :
+
+- Fonds et bordures bleu           |  #3480be
+- Fond gris                        |  #f5f5f5
+- Titres et texte bleu             |  #235680
+- Titre et texte gris foncé        |  #333333
+- Boutons bleu                     |  
+
+Largeur éléments :
+- Fonds des blocs                  |  toute la largeur de l'écran
+- Contenu des blocs                |  1180px maximum
+- Contenu du bloc du 1er titre     |  900px maximum
+
+Font : 
+
+- Logo (Nom Prénom) et titres bleu |  Font Google : Raleway
+- Le reste                         |  Arial*/
